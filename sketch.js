@@ -5,8 +5,8 @@ let mycanvas;
 
 function setup() {
   // need to create a div in html and set canvas as parent
-   mycanvas = createCanvas(400, 400);
-    mycanvas.parent("canvas");
+  mycanvas = createCanvas(400, 400);
+  mycanvas.parent("canvas");
   
   background(50);
   x = width / 2;
@@ -16,6 +16,7 @@ function setup() {
   myinput.size(200);
   mybutton = createButton("input");
   mybutton.mousePressed(runit);
+  createP("history");
 }
 function draw() {
   background(50);
@@ -69,6 +70,7 @@ function runit() {
      
     default:
       console.log(`SYNTAX ERROR: no command ${cmd}.`);
+      createP(`SYNTAX ERROR: no command ${cmd}.`)
   }
   createP(myinput.value())
   myinput.value("")

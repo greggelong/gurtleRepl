@@ -9,3 +9,10 @@ canvas {
   display: block;
   background-color: grey;
 }
+
+textarea{
+  background-color: aqua;
+  color:blue;
+  font-size: x-large;
+  font-family: monospace;
+}
