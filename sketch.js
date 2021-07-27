@@ -2,9 +2,12 @@ let x, y;
 let myinput;
 let mybutton;
 let mycanvas;
+let greg;
 
 function setup() {
   // need to create a div in html and set canvas as parent
+  // must have angle mode = degrees
+  angleMode(DEGREES);
   mycanvas = createCanvas(400, 400);
   mycanvas.parent("canvas");
   
@@ -17,11 +20,7 @@ function setup() {
   mybutton = createButton("input");
   mybutton.mousePressed(runit);
   createP("history");
-}
-function draw() {
-  background(50);
-  fill(200, 200, 0);
-  ellipse(x, y, 50, 50);
+  greg = new Gurtle(width/2,height/2,color(0,255,0));
 }
 
 function movedown(num) {
@@ -51,21 +50,23 @@ function runit() {
   print(inp, cmd, para);
 
   switch (cmd) {
-    case "down":
+    case "forward":
       print(para)
-      movedown(para);
-      break;
-    case "up":
-      print(para)
-      moveup(para);
+      greg.forward(para);
       break;
     case "left":
       print(para)
-      moveleft(para);
+      print(greg.angle)
+      greg.left(para);
+      print(greg.angle)
       break;
     case "right":
       print(para)
-      moveright(para);
+      greg.right(para);
+      break;
+    case "backward":
+      print(para)
+      greg.backward(para);
       break;
      
     default:
