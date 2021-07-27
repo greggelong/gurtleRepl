@@ -23,25 +23,7 @@ function setup() {
   greg = new Gurtle(width/2,height/2,color(0,255,0));
 }
 
-function movedown(num) {
-  y = y + num;
-  print(y)
-}
-
-function moveup(num) {
-  y = y - num;
-  print(y)
-}
-
-function moveleft(num) {
-  x = x - num;
-  print(x)
-}
-
-function moveright(num) {
-  x = x + num;
-  print(x)
-}
+ 
 
 function runit() {
   let inp = myinput.value();
