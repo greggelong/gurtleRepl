@@ -1,6 +1,8 @@
 # gurtleRepl
 a simple read, evaluate, print loop interface in the browser for my p5js turtle
 
+
+(need to get this done, why procrastinate?)
 work to be done:
 - [ ] clear turtle and reset turtle
 - [ ] clear code
